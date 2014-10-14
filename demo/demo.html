@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div><button id="doCrop">Crop Image</button></div>
+        <img id="cropMe" src="./demo.jpg">
+        <script src="./../js/jquery-1.11.1.js"></script>
+        <script src="./../js/jquery.crop-0.1.1.js"></script>
+        <script type="text/javascript">
+            /* demo */
+            $(document).ready(function () {
+                "use strict";
+
+                $("#doCrop").click(function () {
+                    var options = {
+                        left: 100,
+                        top: 188,
+                        width: 436,
+                        height: 500
+                    };
+                    //do crop image
+                    $("#cropMe").crop(options);
+                });
+            });
+        </script>
+    </body>
+</html> 
